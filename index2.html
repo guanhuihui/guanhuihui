@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+<body>
+<img  src="1.png"   id="DemoImg"   border="0" > 
+<button   onclick="SaveAs5()">点击点击</button>
+	<script> 
+function  SaveAs5() 
+{
+	var imgURL =  document.getElementById('DemoImg').getAttribute('src');
+  var   oPop   =   window.open(imgURL,"","width=1,   height=1,   top=5000,   left=5000");   
+  for(;   oPop.document.readyState   !=   "complete";   )   
+  { 
+    if   (oPop.document.readyState   ==   "complete")break; 
+  } 
+  oPop.document.execCommand搜索("SaveAs"); 
+  oPop.close();   
+} 
+</script> 
+
+</body>
+</html>
